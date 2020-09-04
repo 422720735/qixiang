@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>每日天气实况</title>
+    <style>
+        a,a:hover{text-decoration:none}address,blockquote,body,button,code,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,img,input,label,li,ol,p,pre,strong,table,td,textarea,th,ul{margin:0;padding:0}body{font-size:12px;width:100%;height:100%;line-height:200%;font-family:微软雅黑;color:#333}li{list-style-type:none}li a:hover{color:#e76b20}a{color:#000}a:hover{color:#163ca2}img{border:0}h2{font-size:14px}.clear{line-height:0;clear:both;font-size:0}
+        .flex-column,.flex-row{-webkit-box-direction:normal}.clearfix::after{display:block;clear:both;content:""}.d-none{display:none}.d-inline{display:inline}.d-inline-block{display:inline-block}.d-block{display:block}.d-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.flex-row{-webkit-box-orient:horizontal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}.flex-column{-webkit-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.flex-row-reverse{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.flex-column-reverse{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}.flex-wrap{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.flex-nowrap{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap}.flex-wrap-reverse{-webkit-flex-wrap:wrap-reverse;-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse}.flex-fill{-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto}.flex-grow-0{-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0}.flex-grow-1{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1}.flex-shrink-0{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0}.flex-shrink-1{-webkit-flex-shrink:1;-ms-flex-negative:1;flex-shrink:1}.justify-content-start{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.justify-content-end{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.justify-content-center{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.justify-content-between{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.justify-content-around{-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}.align-items-start{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.align-items-end{-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}.align-items-center{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.align-items-baseline{-webkit-box-align:baseline;-webkit-align-items:baseline;-ms-flex-align:baseline;align-items:baseline}.align-items-stretch{-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}.align-content-start{-webkit-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start}.align-content-end{-webkit-align-content:flex-end;-ms-flex-line-pack:end;align-content:flex-end}.align-content-center{-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center}.align-content-between{-webkit-align-content:space-between;-ms-flex-line-pack:justify;align-content:space-between}.align-content-around{-webkit-align-content:space-around;-ms-flex-line-pack:distribute;align-content:space-around}.align-content-stretch{-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch}.align-self-auto{-webkit-align-self:auto;-ms-flex-item-align:auto;align-self:auto}.align-self-start{-webkit-align-self:flex-start;-ms-flex-item-align:start;align-self:flex-start}.align-self-end{-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}.align-self-center{-webkit-align-self:center;-ms-flex-item-align:center;align-self:center}.align-self-baseline{-webkit-align-self:baseline;-ms-flex-item-align:baseline;align-self:baseline}.align-self-stretch{-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch}.float-left{float:left}.float-right{float:right}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.m-1{margin:.375rem}.mt-1,.my-1{margin-top:.375rem}.mr-1,.mx-1{margin-right:.375rem}.mb-1,.my-1{margin-bottom:.375rem}.ml-1,.mx-1{margin-left:.375rem}.m-2{margin:.75rem}.mt-2,.my-2{margin-top:.75rem}.mr-2,.mx-2{margin-right:.75rem}.mb-2,.my-2{margin-bottom:.75rem}.ml-2,.mx-2{margin-left:.75rem}.m-3{margin:1.5rem}.mt-3,.my-3{margin-top:1.5rem}.mr-3,.mx-3{margin-right:1.5rem}.mb-3,.my-3{margin-bottom:1.5rem}.ml-3,.mx-3{margin-left:1.5rem}.m-4{margin:2.25rem}.mt-4,.my-4{margin-top:2.25rem}.mr-4,.mx-4{margin-right:2.25rem}.mb-4,.my-4{margin-bottom:2.25rem}.ml-4,.mx-4{margin-left:2.25rem}.m-5{margin:4.5rem}.mt-5,.my-5{margin-top:4.5rem}.mr-5,.mx-5{margin-right:4.5rem}.mb-5,.my-5{margin-bottom:4.5rem}.ml-5,.mx-5{margin-left:4.5rem}.pt-0,.py-0{padding-top:0}.pr-0,.px-0{padding-right:0}.pb-0,.py-0{padding-bottom:0}.pl-0,.px-0{padding-left:0}.p-1{padding:.375rem}.pt-1,.py-1{padding-top:.375rem}.pr-1,.px-1{padding-right:.375rem}.pb-1,.py-1{padding-bottom:.375rem}.pl-1,.px-1{padding-left:.375rem}.p-2{padding:.75rem}.pt-2,.py-2{padding-top:.75rem}.pr-2,.px-2{padding-right:.75rem}.pb-2,.py-2{padding-bottom:.75rem}.pl-2,.px-2{padding-left:.75rem}.p-3{padding:1.5rem}.pt-3,.py-3{padding-top:1.5rem}.pr-3,.px-3{padding-right:1.5rem}.pb-3,.py-3{padding-bottom:1.5rem}.pl-3,.px-3{padding-left:1.5rem}.p-4{padding:2.25rem}.pt-4,.py-4{padding-top:2.25rem}.pr-4,.px-4{padding-right:2.25rem}.pb-4,.py-4{padding-bottom:2.25rem}.pl-4,.px-4{padding-left:2.25rem}.p-5{padding:4.5rem}.pt-5,.py-5{padding-top:4.5rem}.pr-5,.px-5{padding-right:4.5rem}.pb-5,.py-5{padding-bottom:4.5rem}.pl-5,.px-5{padding-left:4.5rem}.m-n1{margin:-.375rem}.mt-n1,.my-n1{margin-top:-.375rem}.mr-n1,.mx-n1{margin-right:-.375rem}.mb-n1,.my-n1{margin-bottom:-.375rem}.ml-n1,.mx-n1{margin-left:-.375rem}.m-n2{margin:-.75rem}.mt-n2,.my-n2{margin-top:-.75rem}.mr-n2,.mx-n2{margin-right:-.75rem}.mb-n2,.my-n2{margin-bottom:-.75rem}.ml-n2,.mx-n2{margin-left:-.75rem}.m-n3{margin:-1.5rem}.mt-n3,.my-n3{margin-top:-1.5rem}.mr-n3,.mx-n3{margin-right:-1.5rem}.mb-n3,.my-n3{margin-bottom:-1.5rem}.ml-n3,.mx-n3{margin-left:-1.5rem}.m-n4{margin:-2.25rem}.mt-n4,.my-n4{margin-top:-2.25rem}.mr-n4,.mx-n4{margin-right:-2.25rem}.mb-n4,.my-n4{margin-bottom:-2.25rem}.ml-n4,.mx-n4{margin-left:-2.25rem}.m-n5{margin:-4.5rem}.mt-n5,.my-n5{margin-top:-4.5rem}.mr-n5,.mx-n5{margin-right:-4.5rem}.mb-n5,.my-n5{margin-bottom:-4.5rem}.ml-n5,.mx-n5{margin-left:-4.5rem}.m-auto{margin:auto}.mt-auto,.my-auto{margin-top:auto}.mr-auto,.mx-auto{margin-right:auto}.mb-auto,.my-auto{margin-bottom:auto}.ml-auto,.mx-auto{margin-left:auto}.font-13{font-size:13px}.font-14{font-size:14px}.font-15{font-size:15px}.font-16{font-size:16px}.font-18{font-size:18px}.c-pointer{cursor:pointer}
+    </style>
+    <link rel="stylesheet" href="./src/minCss/view.min.css">
+</head>
+<body>
+
+<div class="maptops">成都天气实况</div>
+<div class="sm pl-1 pr-1">
+    <b>成都</b>
+    <span>发布日期：2020-08-21 18:00</span>
+</div>
+<div class="pl-1 pr-1">
+    <b>今天</b>
+    2020年8月20日
+    周四
+</div>
+
+<div class="p-1">
+    <p>对健康影响情况： 空气质量可接受，但某些污染物可能对极少数异常、敏感人群健康有较弱影响。</p>
+    <p>建议采取的措施： 除少数对某些污染物特别容易过敏的人群外，其他人群可以正常进行室外活动。</p>
+</div>
+
+<div class="today d-flex align-items-center pl-1 pr-1">
+    <div class="left">
+        <p class="mb-2" style="font-size: 40px;font-weight: bold;color: #043567;">28～21℃</p>
+        <b>多云转晴</b>
+        <span class="ml-1">空气质量：良</span>
+    </div>
+    <div class="right">
+        <img src="https://www.qixiangwang.cn/skins/Blue2012/icon2/101.png"/>
+    </div>
+</div>
+
+<div class="air pl-1 pr-1">
+    <div class="d-flex justify-content-between">
+        <p>体感温度：24℃</p>
+        <p>湿度：100%</p>
+        <p>气压：954hPa</p>
+    </div>
+    <div class="d-flex justify-content-between">
+        <p>能见度：2km</p>
+        <p>降雨量：0.0mm</p>
+        <p>&ensp;</p>
+    </div>
+    <p>东南风西南风1-2 1m/s</p>
+</div>
+
+<div class="maptop1">未来四川成都天气预报3天</div>
+<div class="days3">
+    <ul>
+        <li><strong>今天 (周四)</strong><br>
+            <img align="absmiddle" src="https://www.qixiangwang.cn/skins/Blue2012/icon2/101.png"><img align="absmiddle" src="https://www.qixiangwang.cn/skins/Blue2012/icon2/150.png"><strong><br>
+                28～21℃</strong><br>
+            <strong>多云转晴</strong><br>
+            <strong>东南风西南风1-2</strong></li>
+        <li class="tqboder">明天 (周五)<br>
+            <img align="absmiddle" src="https://www.qixiangwang.cn/skins/Blue2012/icon2/101.png"><img align="absmiddle" src="https://www.qixiangwang.cn/skins/Blue2012/icon2/350.png"><br>
+            29～22℃<br>
+            多云转阵雨<br>
+            东南风东北风1-2</li>
+        <li class="tqboder">后天 (周六)<br>
+            <img align="absmiddle" src="https://www.qixiangwang.cn/skins/Blue2012/icon2/300.png"><img align="absmiddle" src="https://www.qixiangwang.cn/skins/Blue2012/icon2/305.png"><br>
+            <font color="#ff0000">27</font>～<font color="#4899be">22℃</font><br>
+            阵雨转小雨<br>
+            东北风西北风1-2</li>
+    </ul>
+</div>
+
+<div class="maptops">成都生活指数</div>
+<div class="overflow-hidden">
+    <ul class="idxbox">
+        <li class="idx_icon uv"></li>
+        <li class="idx_name">紫外线指数</li>
+        <li class="idx_value">中等</li>
+        <li class="idx_text">属中等强度紫外线辐射天气，外出时建议涂擦SPF高于15、PA+的防晒护肤品，戴帽子、太阳镜。</li>
+    </ul>
+    <ul class="idxbox">
+        <li class="idx_icon xc"></li>
+        <li class="idx_name">洗车指数</li>
+        <li class="idx_value">较适宜</li>
+        <li class="idx_text">较适宜洗车，未来一天无雨，风力较小，擦洗一新的汽车至少能保持一天。</li>
+    </ul>
+    <ul class="idxbox">
+        <li class="idx_icon tr"></li>
+        <li class="idx_name">旅游指数</li>
+        <li class="idx_value">适宜</li>
+        <li class="idx_text">天气较好，但丝毫不会影响您出行的心情。温度适宜又有微风相伴，适宜旅游。</li>
+    </ul>
+    <ul class="idxbox">
+        <li class="idx_icon co"></li>
+        <li class="idx_name">舒适度指数</li>
+        <li class="idx_value">较舒适</li>
+        <li class="idx_text">白天多云，您在这种天气条件下，会感觉早晚凉爽、舒适，午后偏热。</li>
+    </ul>
+    <ul class="idxbox">
+        <li class="idx_icon ct"></li>
+        <li class="idx_name">穿衣指数</li>
+        <li class="idx_value">热</li>
+        <li class="idx_text">天气热，建议着短裙、短裤、短薄外套、T恤等夏季服装。</li>
+    </ul>
+    <ul class="idxbox">
+        <li class="idx_icon yd"></li>
+        <li class="idx_name">运动指数</li>
+        <li class="idx_value">适宜</li>
+        <li class="idx_text">天气较好，赶快投身大自然参与户外运动，尽情感受运动的快乐吧。</li>
+    </ul>
+    <ul class="idxbox">
+        <li class="idx_icon gm"></li>
+        <li class="idx_name">感冒指数</li>
+        <li class="idx_value">少发</li>
+        <li class="idx_text">各项气象条件适宜，无明显降温过程，发生感冒机率较低。</li>
+    </ul>
+</div>
+
+<div class="ss-v-hd">
+    <h3>搞笑萌图</h3>
+    <ul class="image-list-tag">
+        <li>
+            <a href="http://meng.ichong123.com/miaoxingren/86279">
+                <i class="red">最热</i>
+                <img src="http://www.ichong123.com/files/2017/12/7/217/f.jpg" alt="吐舌头我也会">
+                <h4>吐舌头我也会</h4>
+            </a>
+        </li>                                                <li>
+            <a href="http://meng.ichong123.com/miaoxingren/86470">
+                <i class="orange">动态图</i>
+                <img src="http://www.ichong123.com/files/2017/12/7/245/f.jpg" alt="老大，我们好像暴露了">
+                <h4>老大，我们好像暴露了</h4>
+            </a>
+        </li>                                                <li>
+            <a href="http://meng.ichong123.com/wangxingren/86474">
+                <i class="blue">汪星人</i>
+                <img src="http://www.ichong123.com/files/2017/12/7/247/f.jpg" alt="老板，要来一碗吗">
+                <h4>老板，要来一碗吗</h4>
+            </a>
+        </li>                                                <li>
+            <a href="http://meng.ichong123.com/wangxingren/86478">
+                <i class="green">喵星人</i>
+                <img src="http://www.ichong123.com/files/2017/12/7/204/f.jpg" alt="给你一个白眼">
+                <h4>给你一个白眼</h4>
+            </a>
+        </li>                    </ul>
+</div>
+
+<section class="ss-news mt-2">
+    <h1 class="top-title m-1">有情猫终成眷属 主人的隔空纸条把"缘分"变成了"缘份"</h1>
+    <div class="top-content">
+        <p style="text-indent:2em;">有一种缘分叫一见钟情，那天我透过窗户看见对面楼里你那美妙的身姿，顿时我感觉整个天空都是粉红色的，我想和你谈一场甜甜的恋爱，心中的想法随即想到很久以后，我连我们生的小<a href="/maomao" title="猫猫">猫</a>崽的名字都想好了。可是我是只猫，不会说话，我只能隔着玻璃冲着你喵喵叫。隔着这段距离对于我来说好似那银河那么长，我只能这样静静的欣赏你的美丽。</p><p style="text-align:center;"><img src="http://www.ichong123.com/files/2019/4/28/221/QQ图片20190428134100.jpg" alt="有情猫终成眷属 主人的隔空纸条把&#34;缘分&#34;变成了&#34;缘份&#34;"/></p><p style="text-indent:2em;">主人公是一个叫西蒙(Simon)的橘猫，它这样好几天在窗户上等待对面的猫出现，它的主人麦肯齐(Mackenzie)看见西蒙这样，感到很奇特，决定当红娘帮助西蒙去追寻自己的爱情。</p><p style="text-indent:2em;">她用纸片写着&#34;hi，你的猫叫什么名字。爱你的西蒙&#34;</p><p style="text-align:center;"><img src="http://www.ichong123.com/files/2019/4/28/39/QQ图片20190428133750.jpg" alt="有情猫终成眷属 主人的隔空纸条把&#34;缘分&#34;变成了&#34;缘份&#34;"/> </p><p style="text-indent:2em;">随即对面就回信：&#34;hi，西蒙。我是你好朋友西奥(theo)&#34;，(看来对面的主子也变成了红娘)</p><p style="text-align:center;"><img src="http://www.ichong123.com/files/2019/4/28/6/QQ图片20190428133743.jpg" alt="有情猫终成眷属 主人的隔空纸条把&#34;缘分&#34;变成了&#34;缘份&#34;"/> </p><p style="text-indent:2em;">他们就这样来回写着信，并且很快，她们决定要让两个猫见一面!</p><p style="text-align:center;"><img src="http://www.ichong123.com/files/2019/4/28/86/QQ图片20190428133732.jpg" alt="有情猫终成眷属 主人的隔空纸条把&#34;缘分&#34;变成了&#34;缘份&#34;"/> </p><p style="text-indent:2em;">麦肯齐给西蒙打扮的帅帅气气的。</p><p style="text-align:center;"><img src="http://www.ichong123.com/files/2019/4/28/14/QQ图片20190428133747.jpg" alt="有情猫终成眷属 主人的隔空纸条把&#34;缘分&#34;变成了&#34;缘份&#34;"/></p><p style="text-indent:2em;">看他这紧张加猴急的样子，我先笑了你们随意……</p><p style="text-align:center;"><img src="http://www.ichong123.com/files/2019/4/28/118/QQ图片20190428133735.jpg" alt="有情猫终成眷属 主人的隔空纸条把&#34;缘分&#34;变成了&#34;缘份&#34;"/></p><p style="text-indent:2em;">终于见到了，西蒙见到了西奥。</p><p style="text-align:center;"><img src="http://www.ichong123.com/files/2019/4/28/135/QQ图片20190428133724.jpg" alt="有情猫终成眷属 主人的隔空纸条把&#34;缘分&#34;变成了&#34;缘份&#34;"/></p><p style="text-indent:2em;">看起来他们相处的很好，最后来张&#34;全家福&#34;(看起来西蒙是真的喜欢西奥，我的眼里都是你，甜甜蜜蜜 You Know What I Mean)</p><p style="text-align:center;"><img src="http://www.ichong123.com/files/2019/4/28/137/QQ图片20190428133739.jpg" alt="有情猫终成眷属 主人的隔空纸条把&#34;缘分&#34;变成了&#34;缘份&#34;"/> </p><p style="text-indent:2em;">有情猫终成眷属，&#34;缘分&#34;也变成了&#34;缘份&#34;。这有让多少单身猫变成含着泪的柠檬精呢?(又感动又酸)</p><p style="text-align:center;"><img src="http://www.ichong123.com/files/2019/4/28/112/QQ图片20190428133648.jpg" alt="有情猫终成眷属 主人的隔空纸条把&#34;缘分&#34;变成了&#34;缘份&#34;"/></p>
+    </div>
+</section>
+
+<script>
+    var domList = document.querySelectorAll('ul.idxbox')
+    for (var i = 0; i < domList.length; i++) {
+        domList[i].classList.add('mb-2')
+    }
+</script>
+</body>
+</html>

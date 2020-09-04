@@ -1,0 +1,235 @@
+.maptops {
+  background: url(https://www.qixiangwang.cn/skins/Blue2012/images/index_13.jpg) no-repeat;
+  height: 33px;
+  color: #FFF;
+  padding-left: 10px;
+  line-height: 33px;
+  font-size: 14px;
+}
+
+.maptop1 {
+  margin-left: -1px;
+  margin-top: 10px;
+  background: url(https://www.qixiangwang.cn/skins/Blue2012/images/top_03.jpg) no-repeat;
+  height: 33px;
+  color: #FFF;
+  padding-left: 10px;
+  line-height: 33px;
+  font-size: 14px;
+}
+
+.sm span {
+  color: #ff7e00;
+}
+
+.today {
+
+  .left {
+    width: 68%;
+
+    .tempNum {
+      font-size: 40px;
+      font-weight: 600;
+      color: #043567;
+    }
+
+    b {
+      font-size: 16px;
+    }
+  }
+
+  .right {
+    flex: 1;
+  }
+}
+
+.air {
+  p {
+    font-size: 14px;
+  }
+}
+
+.days3 {
+  ul {
+    overflow: hidden;
+
+    li {
+      float: left;
+      width: 33%;
+      text-align: center;
+      line-height: 22px;
+      font-size: 14px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .tqboder {
+      border-left: 1px solid #fca9a9;
+    }
+  }
+}
+
+.idxbox {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 10px 10px 0 10px;
+
+  .idx_icon {
+    background: url(https://www.qixiangwang.cn/skins/Blue2012/images/idx_sprite.png);
+    width: 60px;
+    height: 55px;
+    float: right;
+
+    &.uv {
+      background-position: 0 -900px;
+    }
+
+    &.xc {
+      background-position: 0 -1650px;
+    }
+
+    &.tr {
+      background-position: 0 -75px;
+    }
+
+    &.co {
+      background-position: 0 -450px;
+    }
+
+    &.ct {
+      background-position: 0 0;
+    }
+
+    &.yd {
+      background-position: 0 -300px;
+    }
+
+    &.gm {
+      background-position: 0 -600px;
+    }
+  }
+
+
+  .idx_name {
+    color: #08c;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  .idx_value {
+    color: #333;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.ss-v-hd {
+  h3 {
+    position: relative;
+    padding-left: 15px;
+    height: 52px;
+    line-height: 52px;
+    border-bottom: solid 1px #eee;
+    font-size: 22px;
+    color: #000;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 5px;
+      height: 22px;
+      left: 0;
+      top: 50%;
+      margin-top: -11px;
+      background: #fb8b48;
+    }
+  }
+
+  .image-list-tag {
+    overflow: hidden;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-bottom: solid 1px #eee;
+    li {
+      float: left;
+      margin:.375rem 0;
+      width: 50%;
+      a {
+        display: block;
+        position: relative;
+
+        i {
+          position: absolute;
+          left: 0;
+          top: 0;
+          line-height: 19px;
+          padding: 0 10px;
+          color: #FFFFFF;
+        }
+
+        .red {
+          background: #d03258
+        }
+
+        .blue {
+          background: #488ed4
+        }
+
+        .pink {
+          background: #fc79a4
+        }
+
+        .green {
+          background: #71b365
+        }
+
+        .orange {
+          background: #fb8b48
+        }
+
+        h4 {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 20px;
+          line-height: 20px;
+          text-indent: 4px;
+          background: rgba(0, 0, 0, .6);
+          color: #FFFFFF;
+        }
+
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.top-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: .3rem;
+  line-height: 150%;
+  color: #000;
+}
+
+.top-content {
+  margin: 0 .3rem .4rem 0.3rem;
+  overflow: hidden;
+  line-height: 200%;
+  font-size: 14px;
+  p {
+
+    word-break: break-all;
+    margin-top: .36rem;
+  }
+}
