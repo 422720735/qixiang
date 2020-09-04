@@ -29,5 +29,3 @@ recipient.json 目标用户邮箱及用户所在城市
     }
   ]
 }
-```# qixiang
-# qixiang
