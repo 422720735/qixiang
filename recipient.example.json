@@ -1,0 +1,25 @@
+{
+  "from": [
+    {
+      "city": "chengdu",
+      "user": [
+        "*****@qq.com",
+        "*****@mrray.cn",
+        "*****@qq.com",
+        "*****@mrray.cn",
+        "*****@mrray.cn",
+        "*****@mrray.cn",
+        "*****@mrray.cn",
+        "*****@qq.com",
+        "*****@qq.com"
+      ]
+    },
+    {
+      "city": "beijing",
+      "user": [
+        "*****@qq.com",
+        "*****@qq.com"
+      ]
+    }
+  ]
+}
