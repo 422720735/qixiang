@@ -19,6 +19,4 @@ recipient.json
 /config.yaml
 /recipient.json
 
-/config.yaml/
-/recipient.json/
 **/gulp/node_modules/
