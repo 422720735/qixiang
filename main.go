@@ -3,11 +3,13 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/robfig/cron"
-	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"qixiang/email"
+	"qixiang/router"
 	"strings"
+
+	"github.com/robfig/cron"
+	"gopkg.in/yaml.v2"
 )
 
 type Conf struct {
@@ -29,7 +31,7 @@ type To struct {
 }
 
 func init() {
-	configFile, err := ioutil.ReadFile("config.yaml")
+	configFile, err := ioutil.ReadFile("./config.yaml")
 	if err != nil {
 		panic(err)
 	}
@@ -38,7 +40,7 @@ func init() {
 		panic(err)
 	}
 
-	jsonByte, err := ioutil.ReadFile("recipient.json")
+	jsonByte, err := ioutil.ReadFile("./recipient.json")
 	if err != nil {
 		panic(err)
 	}
@@ -51,7 +53,7 @@ func init() {
 
 	target = &to
 
-	//router.Star()
+	router.Star()
 
 }
 

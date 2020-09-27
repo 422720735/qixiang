@@ -9,7 +9,7 @@ import (
 	"qixiang/parse/weather"
 )
 
-const httpPort = 8000
+const httpPort = 80
 
 func Assemble(path string) (*models.Weather, error) {
 	if path == "" {
@@ -88,6 +88,7 @@ func HandleHtml(w http.ResponseWriter, r *http.Request) {
 
 func Star() {
 	http.HandleFunc("/", HandleHtml)
+
 	fmt.Printf("Your application is running here: http://localhost:%d\n", httpPort)
 	http.ListenAndServe(fmt.Sprintf(":%d", httpPort), nil)
 }
